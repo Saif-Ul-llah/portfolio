@@ -18,7 +18,8 @@ const Model = ({ mousePosition }: { mousePosition: MousePosition }) => {
   const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
-    particles.current = Array(50).fill().map(() => ({
+    particles.current = Array(50).fill(0).map(() => ({
+
       position: new THREE.Vector3(
         (Math.random() - 0.5) * 10,
         (Math.random() - 0.5) * 10,
