@@ -5,7 +5,12 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { PerspectiveCamera, Environment, OrbitControls, Stars, Text } from '@react-three/drei';
 import * as THREE from 'three';
 
-const Model = ({ mousePosition }) => {
+type MousePosition = {
+  x: number;
+  y: number;
+};
+
+const Model = ({ mousePosition }: { mousePosition: MousePosition }) => {
   const mesh = useRef();
   const particles = useRef([]);
   const [hovered, setHovered] = useState(false);
