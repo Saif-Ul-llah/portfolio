@@ -100,9 +100,14 @@ const Model = ({ mousePosition }: { mousePosition: MousePosition }) => {
     </group>
   );
 };
+type FloatingTextProps = {
+  text: string;
+  position: [number, number, number];
+  rotation: [number, number, number];
+};
 
-const FloatingText = ({ text, position, rotation }) => {
-  const textRef = useRef();
+const FloatingText = ({ text, position, rotation }: FloatingTextProps) => {
+  const textRef = useRef<THREE.Mesh>(null);
 
   useFrame((state) => {
     if (!textRef.current) return;
@@ -123,6 +128,7 @@ const FloatingText = ({ text, position, rotation }) => {
     </Text>
   );
 };
+
 
 const FloatingIcons = () => {
   const icons = useRef([]);
