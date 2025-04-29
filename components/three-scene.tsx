@@ -131,8 +131,8 @@ const FloatingText = ({ text, position, rotation }: FloatingTextProps) => {
 
 
 interface Icon {
-  position: number[];
-  rotation: number[];
+  position: [number, number, number];
+  rotation: [number, number, number];
   scale: number;
   speed: number;
   technology: string;
