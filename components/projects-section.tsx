@@ -105,8 +105,26 @@ const projects = [
   }
 ];
 
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  liveUrl: string;
+  repoUrl: string;
+  details: {
+    challenge: string;
+    solution: string;
+    features: string[];
+    technologies: string[];
+    results: string;
+  };
+};
+
+
 export function ProjectsSection() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.1,
