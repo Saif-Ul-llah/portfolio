@@ -130,23 +130,37 @@ const FloatingText = ({ text, position, rotation }: FloatingTextProps) => {
 };
 
 
+interface Icon {
+  position: number[];
+  rotation: number[];
+  scale: number;
+  speed: number;
+  technology: string;
+}
+
+ 
 const FloatingIcons = () => {
-  const icons = useRef([]);
+  const icons = useRef<Icon[]>([]);
   const technologies = ['React', 'Node.js', 'MongoDB', 'Express', 'JavaScript'];
   
   useEffect(() => {
-    icons.current = Array(8).fill().map(() => ({
+    icons.current = new Array(8).fill(null).map(() => ({
       position: [
         (Math.random() - 0.5) * 20,
         (Math.random() - 0.5) * 20,
-        (Math.random() - 0.5) * 10 - 10
+        0,
       ],
-      rotation: [Math.random() * Math.PI, Math.random() * Math.PI, 0],
-      scale: 0.25 + Math.random() * 0.5,
-      speed: 0.002 + Math.random() * 0.01,
-      technology: technologies[Math.floor(Math.random() * technologies.length)]
+      rotation: [
+        (Math.random() - 0.5) * Math.PI,
+        (Math.random() - 0.5) * Math.PI,
+        (Math.random() - 0.5) * Math.PI,
+      ],
+      scale: 1,
+      speed: Math.random() * 5,
+      technology: "Technology Name",
     }));
   }, []);
+  
   
   useFrame((state) => {
     icons.current.forEach(icon => {
