@@ -12,7 +12,9 @@ type MousePosition = {
 
 const Model = ({ mousePosition }: { mousePosition: MousePosition }) => {
   const mesh = useRef();
-  const particles = useRef([]);
+  const particles = useRef<
+  { position: THREE.Vector3; velocity: THREE.Vector3; size: number }[]
+>([]);
   const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
