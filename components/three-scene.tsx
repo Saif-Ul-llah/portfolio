@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { PerspectiveCamera, Environment, OrbitControls, Stars, Text } from '@react-three/drei';
 import * as THREE from 'three';
+import { Mesh } from 'three';
 
 type MousePosition = {
   x: number;
@@ -11,7 +12,7 @@ type MousePosition = {
 };
 
 const Model = ({ mousePosition }: { mousePosition: MousePosition }) => {
-  const mesh = useRef();
+  const mesh = useRef<Mesh>(null);
   const particles = useRef<
   { position: THREE.Vector3; velocity: THREE.Vector3; size: number }[]
 >([]);
