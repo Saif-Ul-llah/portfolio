@@ -210,13 +210,13 @@ export function ProjectsSection() {
                   {selectedProject && (
                     <>
                       <DialogHeader>
-                        <DialogTitle className="text-2xl">{selectedProject.title}</DialogTitle>
-                        <DialogDescription>{selectedProject.description}</DialogDescription>
+                        <DialogTitle className="text-2xl">{selectedProject?.title}</DialogTitle>
+                        <DialogDescription>{selectedProject?.description}</DialogDescription>
                       </DialogHeader>
                       <div className="relative w-full aspect-video mt-2 mb-4 rounded-lg overflow-hidden">
                         <Image
-                          src={selectedProject.image}
-                          alt={selectedProject.title}
+                          src={selectedProject?.image}
+                          alt={selectedProject?.title}
                           fill
                           className="object-cover"
                         />
@@ -224,16 +224,16 @@ export function ProjectsSection() {
                       <div className="space-y-4">
                         <div>
                           <h3 className="text-lg font-semibold mb-2">The Challenge</h3>
-                          <p className="text-muted-foreground">{selectedProject.details.challenge}</p>
+                          <p className="text-muted-foreground">{selectedProject?.details?.challenge}</p>
                         </div>
                         <div>
                           <h3 className="text-lg font-semibold mb-2">The Solution</h3>
-                          <p className="text-muted-foreground">{selectedProject.details.solution}</p>
+                          <p className="text-muted-foreground">{selectedProject?.details?.solution}</p>
                         </div>
                         <div>
                           <h3 className="text-lg font-semibold mb-2">Key Features</h3>
                           <ul className="list-disc pl-5 text-muted-foreground">
-                            {selectedProject.details.features.map((feature, index) => (
+                            {selectedProject?.details?.features.map((feature, index) => (
                               <li key={index}>{feature}</li>
                             ))}
                           </ul>
@@ -241,24 +241,24 @@ export function ProjectsSection() {
                         <div>
                           <h3 className="text-lg font-semibold mb-2">Technologies Used</h3>
                           <div className="flex flex-wrap gap-2">
-                            {selectedProject.details.technologies.map((tech) => (
+                            {selectedProject?.details?.technologies.map((tech) => (
                               <Badge key={tech}>{tech}</Badge>
                             ))}
                           </div>
                         </div>
                         <div>
                           <h3 className="text-lg font-semibold mb-2">Results</h3>
-                          <p className="text-muted-foreground">{selectedProject.details.results}</p>
+                          <p className="text-muted-foreground">{selectedProject?.details?.results}</p>
                         </div>
                         <div className="flex justify-end gap-3 pt-4">
                           <Button variant="outline" asChild>
-                            <a href={selectedProject.repoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                            <a href={selectedProject?.repoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                               <Github className="h-4 w-4" />
                               View Code
                             </a>
                           </Button>
                           <Button asChild>
-                            <a href={selectedProject.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                            <a href={selectedProject?.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                               <ExternalLink className="h-4 w-4" />
                               Live Demo
                             </a>
