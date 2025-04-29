@@ -144,7 +144,7 @@ const FloatingIcons = () => {
   const technologies = ['React', 'Node.js', 'MongoDB', 'Express', 'JavaScript'];
   
   useEffect(() => {
-    icons.current = Array(8).fill().map(() => ({
+    icons.current = Array(8).fill(0).map(() => ({
       position: [
         (Math.random() - 0.5) * 20,
         (Math.random() - 0.5) * 20,
