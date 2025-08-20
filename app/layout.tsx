@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Saif-Ul-llah | MERN Stack Developer',
-  description: 'Portfolio of John Doe, a MERN stack developer specializing in building modern web applications.',
+  description: 'Portfolio of Saif-Ul-llah, a MERN stack developer specializing in building modern web applications.',
 };
 
 export default function RootLayout({

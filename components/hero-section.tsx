@@ -66,10 +66,10 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg text-muted-foreground mb-10 max-w-2xl"
+            className="text-lg text-muted-foreground mb-10 max-w-2xl "
           >
-            Specialized in crafting performant web applications using MongoDB,
-            Express.js, React, and Node.js. Let&apos;s turn your ideas into reality
+            Specialized in crafting performant web applications using Javascript/Typescript, SQL, Prisma, MongoDB,
+            Express.js, React, and Node.js, Next.js. Let&apos;s turn your ideas into reality
             with clean code and beautiful user experiences.
           </motion.p>
 

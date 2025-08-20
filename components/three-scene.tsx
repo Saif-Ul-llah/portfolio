@@ -70,7 +70,7 @@ const Model = ({ mousePosition }: { mousePosition: MousePosition }) => {
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
       >
-        <boxGeometry args={[3, 3, 3]} />
+        {/* <boxGeometry args={[3, 3, 3]} /> */}
         <meshStandardMaterial
           color={hovered ? "#6366f1" : "#4361ee"}
           roughness={0.2}
@@ -231,7 +231,7 @@ const ThreeScene = () => {
         camera={{ position: [0, 0, isMobile ? 20 : 15], fov: 50 }}
       >
         <PerspectiveCamera makeDefault position={[0, 0, 15]} fov={50} />
-        <ambientLight intensity={0.5} />
+        {/* <ambientLight intensity={0.5} /> */}
         <directionalLight
           position={[10, 10, 5]}
           intensity={1}
@@ -250,7 +250,7 @@ const ThreeScene = () => {
           speed={1}
         />
         <Model mousePosition={mousePosition} />
-        <FloatingIcons />
+        {/* <FloatingIcons /> */}
         <Environment preset="city" />
         <OrbitControls
           enableZoom={false}

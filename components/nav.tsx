@@ -51,7 +51,7 @@ export function Nav() {
           className="flex items-center gap-2 font-bold text-xl text-primary"
         >
           <Code className="h-6 w-6" />
-          <span className="hidden sm:inline-block">Saif-Ul-llah</span>
+          <span className="">Saif-Ul-llah</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -70,13 +70,13 @@ export function Nav() {
           </div>
           <div className="flex space-x-1 ml-4">
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Saif-Ul-llah" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/saif-hammad-952a94219" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </a>
@@ -118,19 +118,19 @@ export function Nav() {
             ))}
             <div className="mt-6 flex gap-4">
               <Button variant="outline" size="icon" asChild className="rounded-full">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Saif-Ul-llah" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                   <span className="sr-only">GitHub</span>
                 </a>
               </Button>
               <Button variant="outline" size="icon" asChild className="rounded-full">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/saif-hammad-952a94219" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
                 </a>
               </Button>
               <Button variant="outline" size="icon" asChild className="rounded-full">
-                <a href="mailto:contact@example.com">
+                <a href="mailto:saifhammad411@gmail.com">
                   <Mail className="h-5 w-5" />
                   <span className="sr-only">Email</span>
                 </a>
