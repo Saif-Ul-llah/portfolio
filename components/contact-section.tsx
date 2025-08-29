@@ -46,22 +46,32 @@ export function ContactSection() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      console.log(values);
-      setIsSubmitting(false);
+ async function onSubmit(values: z.infer<typeof formSchema>) {
+  setIsSubmitting(true);
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(values),
+    });
+
+    if (res.ok) {
       setIsSuccess(true);
       form.reset();
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 5000);
-    }, 1500);
+      setTimeout(() => setIsSuccess(false), 5000);
+    } else {
+      const data = await res.json();
+      alert("Failed to send: " + (data.error || "Unknown error"));
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong. Please try again later.");
+  } finally {
+    setIsSubmitting(false);
   }
+}
+
 
   const container = {
     hidden: { opacity: 0 },
@@ -111,7 +121,7 @@ export function ContactSection() {
                   <div>
                     <h4 className="font-semibold">Email</h4>
                     <a href="mailto:contact@example.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                      contact@example.com
+                      saifhammad411@gamil.com
                     </a>
                   </div>
                 </div>
@@ -123,7 +133,7 @@ export function ContactSection() {
                   <div>
                     <h4 className="font-semibold">Phone</h4>
                     <a href="tel:+15551234567" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                      +1 (555) 123-4567
+                      03142288146
                     </a>
                   </div>
                 </div>
@@ -135,7 +145,7 @@ export function ContactSection() {
                   <div>
                     <h4 className="font-semibold">Location</h4>
                     <p className="text-sm text-muted-foreground">
-                      San Francisco, California, USA
+                      karachi, Pakistan
                     </p>
                   </div>
                 </div>
@@ -144,19 +154,19 @@ export function ContactSection() {
                   <h4 className="font-semibold">Socials</h4>
                   <div className="flex gap-2">
                     <Button variant="outline" size="icon" asChild className="rounded-full">
-                      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                      <a href="https://github.com/Saif-Ul-llah/" target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4" />
                         <span className="sr-only">GitHub</span>
                       </a>
                     </Button>
                     <Button variant="outline" size="icon" asChild className="rounded-full">
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.linkedin.com/in/saif-hammad-952a94219" target="_blank" rel="noopener noreferrer">
                         <Linkedin className="h-4 w-4" />
                         <span className="sr-only">LinkedIn</span>
                       </a>
                     </Button>
                     <Button variant="outline" size="icon" asChild className="rounded-full">
-                      <a href="mailto:contact@example.com">
+                      <a href="mailto:saifhammad411@gmail.com">
                         <Mail className="h-4 w-4" />
                         <span className="sr-only">Email</span>
                       </a>
