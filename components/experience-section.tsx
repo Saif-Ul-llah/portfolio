@@ -20,7 +20,8 @@ export function ExperienceSection() {
       try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/experiences`); // ✅ adjust API base URL
         const data = await res.json();
-        setExperiences(data);
+        //setExperiences(data);
+        setExperiences(data.reverse());
       } catch (err) {
         console.error("Error fetching experiences:", err);
       } finally {
