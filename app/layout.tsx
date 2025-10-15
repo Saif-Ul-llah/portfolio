@@ -1,13 +1,12 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Saif-Ul-llah | MERN Stack Developer',
-  description: 'Portfolio of Saif-Ul-llah, a MERN stack developer specializing in building modern web applications.',
+  title: 'Muhammad Ashar | Full Stack Developer',
+  description: 'Portfolio of Muhammad Ashar, a Software Engineer specializing in mobile and backend applications.',
 };
 
 export default function RootLayout({
@@ -18,14 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );
