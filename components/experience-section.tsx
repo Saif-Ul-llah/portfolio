@@ -1,26 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+
+type Experience = {
+  _id: string;
+  role: string;
+  company: string;
+  period: string;
+  location: string;
+  description: string;
+};
 
 export function ExperienceSection() {
-  const [experiences, setExperiences] = useState<any[]>([]);
+  const [experiences, setExperiences] = useState<Experience[]>([]);
   const [loading, setLoading] = useState(true);
-
-  const [ref, inView] = useInView({
-    triggerOnce: false,
-    threshold: 0.1,
-  });
 
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/experiences`); // ✅ adjust API base URL
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/experiences`);
         const data = await res.json();
-        //setExperiences(data);
         setExperiences(data.reverse());
       } catch (err) {
         console.error("Error fetching experiences:", err);
@@ -32,86 +31,44 @@ export function ExperienceSection() {
     fetchExperiences();
   }, []);
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
+  if (loading) {
+    return (
+      <section id="experience" className="py-20 px-6">
+        <div className="max-w-6xl mx-auto text-center text-gray-400">Loading experiences...</div>
+      </section>
+    );
+  }
 
   return (
-    <section id="experience" className="py-20 md:py-32">
-      <motion.div
-        ref={ref}
-        variants={container}
-        initial="hidden"
-        animate={inView ? "show" : "hidden"}
-        className="container px-4 sm:px-6 lg:px-8 mx-auto "
-      >
-        <motion.div variants={item} className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Work Experience</h2>
-          <p className="text-lg text-muted-foreground">
-            My professional journey as a MERN stack developer.
-          </p>
-        </motion.div>
+    <section id="experience" className="py-20 px-6">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">EXPERIENCE</h2>
 
-        {loading ? (
-          <p className="text-center text-muted-foreground">Loading experiences...</p>
-        ) : (
-          <div className="space-y-10 relative before:absolute before:inset-0 before:left-[19px] before:ml-px md:before:mx-auto before:h-full before:w-0.5 before:bg-border before:content-[''] md:before:left-1/2">
-            {experiences.map((experience, index) => (
-              <motion.div
-                key={experience._id}
-                variants={item}
-                className={`flex items-center justify-between ${
-                  index % 2 === 0 ? "flex-row-reverse" : ""
-                } md:gap-6`}
-              >
-                <div className="hidden md:block md:w-1/2"></div>
-
-                <div className="z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-background shadow-md shadow-primary/5 ring-1 ring-border md:mx-auto">
-                  <Briefcase className="h-5 w-5 text-primary" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {experiences.map((exp) => (
+            <div key={exp._id} className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-lg p-8 border border-gray-800">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg className="w-8 h-8 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                  </svg>
                 </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-1">{exp.role}</h3>
+                  <p className="text-purple-400 font-medium">{exp.company}</p>
+                </div>
+              </div>
 
-                <Card className="w-[calc(100%-4rem)] md:w-1/2 border border-border">
-                  <CardHeader>
-                    <CardTitle>{experience.role}</CardTitle>
-                    <CardDescription className="flex flex-col gap-2">
-                      <span className="font-medium text-foreground">{experience.company}</span>
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-muted-foreground text-sm">
-                        <div className="flex items-center gap-1">
-                          <Calendar className="h-3 w-3" />
-                          <span>{experience.period}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <MapPin className="h-3 w-3" />
-                          <span>{experience.location}</span>
-                        </div>
-                      </div>
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="mb-4 text-muted-foreground">{experience.description}</p>
-                    <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
-                      {experience.responsibilities?.map((task: string, i: number) => (
-                        <li key={i}>{task}</li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        )}
-      </motion.div>
+              <div className="space-y-2 text-gray-400 text-sm mb-4">
+                <p>{exp.period}</p>
+                <p>{exp.location}</p>
+              </div>
+
+              <p className="text-gray-300 leading-relaxed">{exp.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
