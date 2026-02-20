@@ -141,9 +141,9 @@ export function HeroSection() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-gray-500">
+        {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-gray-500">
           <ArrowDown size={20} />
-        </div>
+        </div> */}
       </div>
     </section>
   );
