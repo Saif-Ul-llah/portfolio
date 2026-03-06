@@ -101,7 +101,7 @@ export function HeroSection() {
             View Projects
           </a>
           <a
-            href="https://drive.google.com/uc?export=download&id=1ufyJdFXz_R1eT3D6CguNvhX6OjWCx5x-"
+            href="https://drive.google.com/file/d/1GfbcTzZnrckifc1ilsO9iqNsamgbOfD2/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-glow px-8 py-3 rounded-xl glass text-white font-medium inline-flex items-center gap-2 relative z-10"
