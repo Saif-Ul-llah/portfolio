@@ -1,0 +1,351 @@
+[
+ {
+  "_id": "68c06fe16bfc979ef3c96237",
+  "title": "The BD Arts",
+  "description": "An e-commerce website where pre-made products are available\nfor sale, and customers can place custom orders based on their\nrequirements. The platform includes an admin dashboard for\nmanaging and monitoring customer orders",
+  "image": "https://res.cloudinary.com/djzi5j5u2/image/upload/v1757441522/nextjs_uploads/r8odau4yzi5nelipyrjk.png",
+  "tags": [
+   "Next.js",
+   "Tailwind CSS",
+   "Paypal",
+   "Stripe",
+   "Node.js",
+   "MongoDB"
+  ],
+  "liveUrl": "https://bd-art.vercel.app/",
+  "repoUrl": "https://github.com/Saif-Ul-llah",
+  "createdAt": "2025-09-09T18:20:17.487Z",
+  "details": {
+   "challenge": "Integration of Payment methods Because before this i don't have enough exprecince on that .",
+   "solution": "Study Doc and getting help with ai Tools ",
+   "features": [
+    "Authentication",
+    "Listings",
+    "Add to Cart",
+    "Payments Methode Inegrations",
+    "Order History"
+   ],
+   "technologies": [
+    "Next.js",
+    "Node.js",
+    "MongoDB",
+    "Tailwind CSS"
+   ],
+   "results": ""
+  }
+ },
+ {
+  "_id": "68c1ba3820eebc5a2da4c11e",
+  "title": "CRM Coach-Portal",
+  "description": "In this project, I implemented Role-Based Access Control (RBAC) to manage multiple user roles and ensure highly secure API endpoints. Each API is equipped with a role identifierâ€“based access control system for enhanced security.\n\nThe backend was developed in TypeScript, following OOP principles to maintain scalability, modularity, and clean code architecture. The project uses Azure SQL as the database, with proper normalization applied to ensure efficient data management. It smoothly handles and manages data from over 450 companies without performance issues.\n\nAdditionally, the system was deployed on Microsoft Azure and integrated with Azure Scheduled Jobs for automated background tasks and maintenance.",
+  "image": "https://res.cloudinary.com/djzi5j5u2/image/upload/v1757524841/nextjs_uploads/vfouzlhibj7zvgyzq1nn.png",
+  "tags": [
+   "TypeScript",
+   "Node.js",
+   "Azure SQL",
+   "Azure Schedule jobs",
+   "RBAC",
+   "Prisma ORM",
+   "Firebase Notification"
+  ],
+  "liveUrl": "https://coach.apployee.nl/",
+  "repoUrl": "https://github.com/Saif-Ul-llah",
+  "createdAt": "2025-09-10T17:49:44.185Z",
+  "details": {
+   "challenge": "One of the key challenges in this project was integrating third-party APIs and synchronizing them with the internal database. Specifically, the system needed to fetch and manage driver health dataâ€”including metrics such as heart rate, cardiovascular activity, vertebrae health, and other vital signsâ€”by connecting to MS Fit watch devices and their associated databases.",
+   "solution": "To address this challenge, I conducted a deep analysis of the third-party database design and integration approach. This involved thoroughly reviewing their documentation, understanding the data flow, and mapping out the synchronization process. By gaining an in-depth understanding of their system, I was able to design a seamless integration strategy that ensured accurate and reliable data exchange between the App and external third party database.",
+   "features": [
+    "RBAC",
+    "Socket IO",
+    "Chat",
+    "Automated Alert",
+    "ChatGPT Integration",
+    "Third Party Api Integration"
+   ],
+   "technologies": [
+    "Node.js",
+    "Azure SQL",
+    "TyeScript",
+    "Joi Validation",
+    "Prisma ORM"
+   ],
+   "results": "Successfully designed and delivered a scalable application, enabling the client to achieve their final project milestone. The solution not only ensured secure and efficient system performance but also provided a strong foundation for future scalability and feature expansion."
+  }
+ },
+ {
+  "_id": "6ab7c753c5b76e2db45a94e4",
+  "title": "LeapWithMe - AI-Powered Learning & Mentorship Platform",
+  "description": "An AI-powered learning platform with separate portals for students, mentors and admins. Students learn through a streaming Google Gemini chat tutor that accepts images, PDFs, audio, video and code, and can generate images. They can also start live audio/video AI sessions, or escalate to a human mentor with a meeting link and optional recording. Mentors are approved by admins, and Stripe subscriptions (Free/Pro/Premium) set token, file and session-minute limits. Built with Next.js 16, React 19, Convex, Better Auth, Stripe, Firebase push and Azure Blob storage.",
+  "image": "https://res.cloudinary.com/djzi5j5u2/image/upload/v1790428959/nextjs_uploads/cxknouxlw6egk2tpnirf.png",
+  "tags": [
+   "Next.js",
+   "React",
+   "Convex",
+   "Google Gemini API",
+   "Stripe",
+   "Firebase",
+   "AI Integration"
+  ],
+  "liveUrl": "https://app.leapwithme.io/",
+  "repoUrl": "https://github.com/Saif-Ul-llah",
+  "createdAt": "2026-09-26T13:23:31.048Z",
+  "details": {
+   "challenge": "Combining real-time AI tutoring, live mentor sessions and usage-limited subscription tiers in one role-based platform.",
+   "solution": "Used Convex for a real-time serverless backend, Gemini streaming for the tutor, rolling 24-hour token tracking per Stripe tier, and route-level role enforcement for the three portals.",
+   "features": [
+    "Streaming Gemini AI chat tutor with file uploads",
+    "Live audio/video AI sessions",
+    "Escalation to human mentors with recordings",
+    "Student, mentor & admin portals (RBAC)",
+    "Mentor approval workflow",
+    "Stripe Free/Pro/Premium subscriptions with usage limits",
+    "Firebase push notifications"
+   ],
+   "technologies": [
+    "Next.js",
+    "React",
+    "Convex",
+    "Google Gemini API",
+    "Stripe",
+    "Firebase",
+    "AI Integration"
+   ],
+   "results": ""
+  }
+ },
+ {
+  "_id": "6ab7c753c5b76e2db45a94e6",
+  "title": "Meetin - Real-Time Team Chat Platform",
+  "description": "Meetin is a private, admin-managed team messaging platform, similar to a lightweight Slack. It supports real-time 1:1 and group chat over Socket.IO, with online presence, typing indicators and read receipts. Users can send images, files and voice notes, and link previews are clickable. An admin panel handles user onboarding, groups and system settings. The front end uses React 19, Vite, Tailwind and Zustand. The back end is a modular Node.js/Express TypeScript API with MongoDB, JWT auth, Joi validation, AWS S3 media storage, Firebase push notifications and Jest tests.",
+  "image": "https://res.cloudinary.com/djzi5j5u2/image/upload/v1790428962/nextjs_uploads/op3bjsld1rryqa0qdg8f.png",
+  "tags": [
+   "React",
+   "TypeScript",
+   "Node.js",
+   "Express",
+   "MongoDB",
+   "Socket.IO",
+   "AWS S3"
+  ],
+  "liveUrl": "https://meetinthechat.com/",
+  "repoUrl": "https://github.com/Saif-Ul-llah",
+  "createdAt": "2026-09-26T13:23:31.793Z",
+  "details": {
+   "challenge": "Delivering reliable real-time messaging with presence and read receipts for a private, admin-controlled team.",
+   "solution": "Built a modular Express/TypeScript API with Socket.IO event handlers for messages, presence and admin actions, MongoDB models for conversations and receipts, and S3 for media.",
+   "features": [
+    "Real-time 1:1 & group chat",
+    "Online presence, typing indicators & read receipts",
+    "Image, file & voice-note sharing",
+    "Admin-managed user onboarding",
+    "Firebase push notifications",
+    "S3 media storage"
+   ],
+   "technologies": [
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Socket.IO",
+    "AWS S3"
+   ],
+   "results": ""
+  }
+ },
+ {
+  "_id": "6ab7c754c5b76e2db45a94e8",
+  "title": "AirShare - Instant File & Content Sharing",
+  "description": "AirShare is a room-based sharing app for files, text, code snippets, links and markdown notes, joined with a short code. In Local Network mode, nearby devices are discovered automatically and send files directly peer-to-peer over WebRTC, with no internet needed. Internet mode adds persistent rooms, folders and version history. Data is encrypted in the browser with AES-256-GCM, using keys derived from the room password. Owners can set expiry times, download limits and one-time links. It is a Next.js monorepo with a Node.js API, MongoDB, Redis, S3/R2 storage and Socket.IO, and installs as a PWA.",
+  "image": "https://res.cloudinary.com/djzi5j5u2/image/upload/v1790428964/nextjs_uploads/ldmcspfn64wzaqp9syb5.png",
+  "tags": [
+   "Next.js",
+   "TypeScript",
+   "WebRTC",
+   "Socket.IO",
+   "MongoDB",
+   "Redis",
+   "Encryption"
+  ],
+  "liveUrl": "https://air-share-one.vercel.app/",
+  "repoUrl": "https://github.com/Saif-Ul-llah",
+  "createdAt": "2026-09-26T13:23:32.879Z",
+  "details": {
+   "challenge": "Supporting both offline local-network transfers and secure internet sharing in one product.",
+   "solution": "Built two room modes: WebRTC peer-to-peer on the local network, and a server-relayed mode with S3/R2 storage. Content is encrypted in the browser with password-derived keys (PBKDF2).",
+   "features": [
+    "Room-based sharing with short codes",
+    "Local network P2P transfers over WebRTC",
+    "Internet mode with folders & version history",
+    "Client-side AES-256-GCM encryption",
+    "Expiry times, download limits & one-time links",
+    "Installable PWA"
+   ],
+   "technologies": [
+    "Next.js",
+    "TypeScript",
+    "WebRTC",
+    "Socket.IO",
+    "MongoDB",
+    "Redis",
+    "Encryption"
+   ],
+   "results": ""
+  }
+ },
+ {
+  "_id": "6ab7c755c5b76e2db45a94ea",
+  "title": "Noble Ink Studios - Ebook Publishing Services Website",
+  "description": "A premium website for a ghostwriting and ebook publishing agency, designed to turn visitors into author leads. It showcases the agency's services: ghostwriting, editing, cover design, publishing support, book marketing and audiobooks. Visitors can read about the process, see social proof and submit a manuscript brief, and users can sign up and log in. The front end uses Next.js, React 19, TypeScript, Tailwind CSS and Zustand. The back end is a custom Express/TypeScript API with MongoDB, JWT auth, OTP password reset, Nodemailer email and S3 file uploads. It is SEO-friendly and fully responsive.",
+  "image": "https://res.cloudinary.com/djzi5j5u2/image/upload/v1790428967/nextjs_uploads/qkyph1e4wvytuhhz07sv.png",
+  "tags": [
+   "Next.js",
+   "React",
+   "TypeScript",
+   "Tailwind CSS",
+   "Node.js",
+   "MongoDB"
+  ],
+  "liveUrl": "https://ebook-frontend-wine.vercel.app/",
+  "repoUrl": "https://github.com/Saif-Ul-llah",
+  "createdAt": "2026-09-26T13:23:33.420Z",
+  "details": {
+   "challenge": "Turning a publishing agency's services into a site that generates author leads.",
+   "solution": "Designed a conversion-focused Next.js site with clear service paths and a brief-submission flow, backed by a custom Express/MongoDB API for auth and leads.",
+   "features": [
+    "Service showcase & process pages",
+    "Manuscript brief submission",
+    "User sign-up / login with OTP password reset",
+    "Email notifications",
+    "SEO-friendly responsive design"
+   ],
+   "technologies": [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Node.js",
+    "MongoDB"
+   ],
+   "results": ""
+  }
+ },
+ {
+  "_id": "6ab7c756c5b76e2db45a94ec",
+  "title": "CASPer Edge - AI Med School Test Prep Platform",
+  "description": "CASPer Edge is a test-prep platform for pre-med students taking the CASPer situational judgement test. Students practise timed scenarios by typing or recording video. Video answers are transcribed with Google Speech-to-Text, then scored by an AI feedback engine that uses Gemini with RAG over a Qdrant knowledge base. Other features include a scenario bank, personal statement review, progress analytics, Stripe subscriptions and an admin panel for scenarios, tests, courses and users. Built with Next.js, React Query, Express/TypeScript, MongoDB, Redis/BullMQ and AWS S3.",
+  "image": "https://res.cloudinary.com/djzi5j5u2/image/upload/v1790428970/nextjs_uploads/in9rbtvvyzsrlkj8l0a3.png",
+  "tags": [
+   "Next.js",
+   "Node.js",
+   "Express",
+   "MongoDB",
+   "Google Gemini API",
+   "RAG",
+   "Stripe",
+   "Redis"
+  ],
+  "liveUrl": "https://app.casperedge.com/login",
+  "repoUrl": "https://github.com/Saif-Ul-llah",
+  "createdAt": "2026-09-26T13:23:34.563Z",
+  "details": {
+   "challenge": "Giving students expert-quality feedback on free-form typed and video answers, at scale.",
+   "solution": "Built an AI pipeline that transcribes video with Google Speech-to-Text, retrieves relevant rubric knowledge from Qdrant, and generates feedback with Gemini, processed in BullMQ queues.",
+   "features": [
+    "Timed CASPer scenario practice",
+    "Typed or video-recorded answers",
+    "Speech-to-text transcription",
+    "AI feedback with Gemini + RAG (Qdrant)",
+    "Personal statement review",
+    "Stripe subscriptions",
+    "Admin panel for scenarios, tests & courses"
+   ],
+   "technologies": [
+    "Next.js",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Google Gemini API",
+    "RAG",
+    "Stripe",
+    "Redis"
+   ],
+   "results": ""
+  }
+ },
+ {
+  "_id": "6ab7c757c5b76e2db45a94ee",
+  "title": "Humble Futures Funding - Prop Trading Firm Platform",
+  "description": "A full-stack platform for a futures proprietary trading firm that funds skilled traders. The marketing site presents evaluation plans, promotions, discount codes, partners, FAQs and legal pages, with a cookie-consent system. Traders can create an account, buy evaluation plans through Stripe checkout, request payouts and track purchases. A built-in affiliate program tracks referrals, commissions and withdrawals. The front end uses React, Vite, Redux Toolkit, Formik/Yup, Framer Motion and Tailwind. The back end is a Node.js/Express API with MongoDB, JWT auth, Nodemailer and CSV data processing.",
+  "image": "https://res.cloudinary.com/djzi5j5u2/image/upload/v1790428976/nextjs_uploads/rfzy3ze4rkolpwe8z6kh.png",
+  "tags": [
+   "React",
+   "Redux Toolkit",
+   "Node.js",
+   "Express",
+   "MongoDB",
+   "Stripe",
+   "Tailwind CSS"
+  ],
+  "liveUrl": "https://www.humblefunding.co/",
+  "repoUrl": "https://github.com/Saif-Ul-llah",
+  "createdAt": "2026-09-26T13:23:35.461Z",
+  "details": {
+   "challenge": "Handling plan purchases, payouts and affiliate commissions together for a prop trading firm.",
+   "solution": "Built a React/Redux front end and an Express/MongoDB API with Stripe payments, purchase tracking, and affiliate referral and withdrawal models.",
+   "features": [
+    "Evaluation plans & promotions",
+    "Stripe checkout",
+    "Trader accounts & payout requests",
+    "Affiliate program with commissions & withdrawals",
+    "Cookie consent & legal pages",
+    "CSV data processing"
+   ],
+   "technologies": [
+    "React",
+    "Redux Toolkit",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Stripe",
+    "Tailwind CSS"
+   ],
+   "results": ""
+  }
+ },
+ {
+  "_id": "6ab7c758c5b76e2db45a94f0",
+  "title": "Malware Watch - Supply-Chain Malware Defence Tool",
+  "description": "A security tool I built after a real supply-chain attack injected hidden, obfuscated JavaScript loaders into build config files such as postcss.config.mjs and eslint.config.mjs. It protects in four layers. A background daemon watches the dev tree, a git guard rolls back malicious pulls and merges, and a command guard blocks build, lint and tsc while a project is infected. A scheduled GitHub Actions scan checks every repo and opens an issue when it finds something. A local web dashboard shows live protection status, findings and logs. It is dependency-free Python for Windows, macOS and Linux.",
+  "image": "https://res.cloudinary.com/djzi5j5u2/image/upload/v1790428980/nextjs_uploads/bfezzjs1mbl40mi8vmtw.png",
+  "tags": [
+   "Python",
+   "Cybersecurity",
+   "Git Hooks",
+   "GitHub Actions",
+   "DevOps"
+  ],
+  "liveUrl": "",
+  "repoUrl": "https://github.com/Saif-Ul-llah",
+  "createdAt": "2026-09-26T13:23:36.179Z",
+  "details": {
+   "challenge": "A real supply-chain attack kept re-injecting hidden, obfuscated loaders into build config files across many repos.",
+   "solution": "Built a four-layer, dependency-free Python defence that detects the loader signatures and stops infected code from ever executing.",
+   "features": [
+    "Background daemon watching the dev tree",
+    "Git guard that reverts malicious pulls/merges",
+    "Command guard blocking build/lint/tsc when infected",
+    "Scheduled GitHub Actions fleet scan with issue alerts",
+    "Local web dashboard with live status & logs"
+   ],
+   "technologies": [
+    "Python",
+    "Cybersecurity",
+    "Git Hooks",
+    "GitHub Actions",
+    "DevOps"
+   ],
+   "results": ""
+  }
+ }
+]
